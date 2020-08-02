@@ -1,4 +1,4 @@
-![](./idea.png)
+![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/idea.png)
 
 Hello. I'm Duane. I am a product development professional with a strong focus on technology and data.
 
