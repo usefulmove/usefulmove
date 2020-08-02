@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/idea.png)
+![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/idea.png)
 
 Hello. I'm Duane. I am a product development professional with a strong focus on technology and data.
 
@@ -8,16 +8,18 @@ Hello. I'm Duane. I am a product development professional with a strong focus on
 
 #### Connect with me:
 
-[<img align="left" alt="dedmonds.co" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="dedmonds | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="dedmonds | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+[<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/avatar.png" />][website]
+[<img align="left" alt="dedmonds | LinkedIn" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/linkedin.svg" />][linkedin]
+[<img align="left" alt="dedmonds | Twitter" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/twitter.svg" />][twitter]
 
-<br><br>
+<br>
 
-#### Projects
+#### Projects:
 
 - [COVID-19 Risk Modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/covid-19.html)
 - [Predictive Modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/pinguino.html)
+- [Lc0](https://lczero.org)
+
 
 [website]: http://dedmonds.co
 [twitter]: https://twitter.com/dedmonds
