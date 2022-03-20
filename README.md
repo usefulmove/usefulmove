@@ -17,7 +17,6 @@ Hello. I'm Duane. I am a product development professional with a strong focus on
 #### Projects:
 
 - [COVID-19 Risk Modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/covid-19.html)
-- [Predictive Modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/pinguino.html)
 - [Lc0](https://lczero.org)
 
 
