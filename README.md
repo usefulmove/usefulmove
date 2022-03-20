@@ -9,7 +9,7 @@ Hello. I'm Duane. I am a product development professional with a strong focus on
 #### Connect with me:
 
 [<img align="left" alt="dedmonds.co" width="28px" src="https://cdn0.iconfinder.com/data/icons/thin-files-documents/57/thin-081_file_document_cv_curriculum_vitae-1024.png" />][resume]
-[<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/avatar.png" />][website]
+[<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/avatar_rev.png" />][website]
 [<img align="left" alt="dedmonds | LinkedIn" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/linkedin.svg" />][linkedin]
 [<img align="left" alt="dedmonds | Twitter" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/twitter.svg" />][twitter]
 
