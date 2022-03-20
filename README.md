@@ -21,5 +21,6 @@ Hello. I'm Duane. I am a product development professional with a strong focus on
 
 
 [website]: http://dedmonds.co
+[resume]: https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf
 [twitter]: https://twitter.com/dedmonds
 [linkedin]: https://linkedin.com/in/dedmonds
