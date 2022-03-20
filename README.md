@@ -8,6 +8,7 @@ Hello. I'm Duane. I am a product development professional with a strong focus on
 
 #### Connect with me:
 
+[<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/avatar.png" />][resume]
 [<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/avatar.png" />][website]
 [<img align="left" alt="dedmonds | LinkedIn" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/linkedin.svg" />][linkedin]
 [<img align="left" alt="dedmonds | Twitter" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/twitter.svg" />][twitter]
@@ -20,7 +21,7 @@ Hello. I'm Duane. I am a product development professional with a strong focus on
 - [Lc0](https://lczero.org)
 
 
-[website]: http://dedmonds.co
 [resume]: https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf
+[website]: http://dedmonds.co
 [twitter]: https://twitter.com/dedmonds
 [linkedin]: https://linkedin.com/in/dedmonds
