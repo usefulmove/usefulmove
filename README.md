@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/code.sql.png)
+![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/database.jpg)
 
 Hello. I'm Duane. I am a product development professional with a strong focus on technology and data.
 
