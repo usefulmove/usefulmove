@@ -19,7 +19,7 @@ Hello. I'm Duane. I am a product development professional with a strong focus on
 - [resume](https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf)
 - [dedmonds.co](https://www.dedmonds.co/)
 - [COVID-19 data modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/covid-19.html)
-- [comp intepreter](https://github.com/usefulmove/comp)
+- [comp intepreter](https://github.com/usefulmove/comp#readme)
 - [decode data object library](https://github.com/usefulmove/code/tree/master/decode)
 - [Lc0](https://lczero.org)
 
