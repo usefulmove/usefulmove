@@ -1,6 +1,6 @@
-![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/database.jpg)
+![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/hello.png)
 
-Hello. I'm Duane. I am a product development professional with a strong focus on technology and data.
+I'm Duane. I am a product development professional with a strong focus on technology and data.
 
 [dedmonds.co](http://dedmonds.co)
 
