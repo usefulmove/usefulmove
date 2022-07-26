@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/hello.png)
 
-I'm Duane.
+Hello. I'm Duane.
 
 [dedmonds.co](http://dedmonds.co)
 
