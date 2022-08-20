@@ -19,8 +19,8 @@ Hello. I'm Duane.
 - [resume](https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf)
 - [dedmonds.co ( professional site )](https://www.dedmonds.co/)
 - [COVID-19 data modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/covid-19.html)
-- [Comp intepreter](https://github.com/usefulmove/comp#readme)
-- [dcode Data Object Library](https://github.com/usefulmove/code/tree/master/decode)
+- [comp command intepreter](https://github.com/usefulmove/comp#readme)
+- [dcode data object library](https://github.com/usefulmove/code/tree/master/decode)
 - [Leela Chess Zero](https://lczero.org)
 
 
