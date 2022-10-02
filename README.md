@@ -16,8 +16,8 @@ Hello. I'm Duane.
 <br>
 
 #### Links:
-- [Experience ( resume )](https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf)
-- [Site ( dedmonds.co )](https://www.dedmonds.co/)
+- [experience ( resume )](https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf)
+- [site ( dedmonds.co )](https://www.dedmonds.co/)
 - [COVID-19 data modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/covid-19.html)
 - [Comp ( intepreter )](https://github.com/usefulmove/comp#readme)
 - [Data Object Library ( decode )](https://github.com/usefulmove/code/tree/master/decode)
