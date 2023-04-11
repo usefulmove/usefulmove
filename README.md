@@ -18,7 +18,7 @@ Hello. I'm Duane.
 #### Links:
 - [experience](https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf) ( resume )
 - [site](https://www.dedmonds.co/) ( dedmonds.co )
-- [coren](https://github.com/usefulmove/coren#readme) and [comp](https://github.com/usefulmove/comp#readme) ( interpreters )
+- [coren one](https://github.com/usefulmove/coren#readme) and [comp](https://github.com/usefulmove/comp#readme) ( interpreters )
 - [COVID-19 data modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/covid-19.html)
 
 
