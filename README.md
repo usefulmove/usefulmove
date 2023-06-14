@@ -20,6 +20,7 @@ Hello. I'm Duane.
 - [site](https://www.dedmonds.co/) ( dedmonds.co )
 - [coren one](https://github.com/usefulmove/coren#readme) and [comp](https://github.com/usefulmove/comp#readme) ( interpreters )
 - [COVID-19 data modeling](https://htmlpreview.github.io/?https://github.com/usefulmove/o/blob/master/covid-19.html)
+- [leetcode](https://leetcode.com/dedmonds)
 
 
 [resume]: https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf
