@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/hello.png)
 
-<span style="font-family:Papyrus; font-size:16em;">Hello. I'm Duane.</span>
+<span style="font-family:Papyrus; font-size:48em;">Hello. I'm Duane.</span>
 
 [dedmonds.co](http://dedmonds.co)
 
