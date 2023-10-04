@@ -9,8 +9,8 @@ Hello. I'm Duane.
 ### Connect with me:
 
 [<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/avatar_rev.ico" />][website]
-[<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/cv.png" />][resume]
 [<img align="left" alt="dedmonds | LinkedIn" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/linkedin.svg" />][linkedin]
+[<img align="left" alt="dedmonds.co" width="28px" src="https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/cv.png" />][resume]
 
 <br><br><br>
 
