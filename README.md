@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/usefulmove/usefulmove/master/assets/hello.png)
 
-Hello. I'm Duane.
+hello. i'm duane.
 
 [dedmonds.co](http://dedmonds.co)
 
@@ -17,7 +17,9 @@ Hello. I'm Duane.
 ### Links:
 - [experience](https://github.com/usefulmove/o/blob/master/dedmonds_resume.pdf) ( resume )
 - [contact me](https://www.dedmonds.co/) ( dedmonds.co )
-- [coren one](https://github.com/usefulmove/coren#readme) and [comp](https://github.com/usefulmove/comp#readme) ( interpreters )
+- coren one ( [site](https://coren.one) , [repo](https://github.com/usefulmove/coren#readme) )
+- [comp](https://github.com/usefulmove/comp#readme) ( interpreter )
+- [cadr](https://github.com/usefulmove/cadr#readme) ( emacs lisp functional programming library )
 - [enc](https://github.com/usefulmove/enc#readme) ( emacs encryption )
 - [leetcode](https://leetcode.com/dedmonds)
 
