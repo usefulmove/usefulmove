@@ -19,7 +19,7 @@ hello. i'm duane.
 - [contact me](https://www.dedmonds.co/) ( dedmonds.co )
 - coren one ( [site](https://coren.one) , [repo](https://github.com/usefulmove/coren#readme) )
 - [comp](https://github.com/usefulmove/comp#readme) ( interpreter )
-- [cadr](https://github.com/usefulmove/cadr#readme) ( emacs lisp functional programming library )
+- [othello](https://github.com/usefulmove/othello#readme) ( emacs lisp functional programming library )
 - [enc](https://github.com/usefulmove/enc#readme) ( emacs encryption )
 - [leetcode](https://leetcode.com/dedmonds)
 
