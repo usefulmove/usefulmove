@@ -15,7 +15,7 @@ hello. i'm duane.
 <br><br><br>
 
 ### Links:
-- [experience](https://github.com/usefulmove/o/blob/main/dedmonds_resume.pdf) ( resume )
+- [experience](https://raw.githubusercontent.com/usefulmove/o/main/dedmonds_resume.pdf) ( resume )
 - [contact me](https://www.dedmonds.co/) ( dedmonds.co )
 - coren one ( [site](https://coren.one) , [repo](https://github.com/usefulmove/coren#readme) )
 - [comp](https://github.com/usefulmove/comp#readme) ( interpreter )
@@ -24,6 +24,6 @@ hello. i'm duane.
 - [leetcode](https://leetcode.com/dedmonds)
 
 
-[resume]: https://github.com/usefulmove/o/blob/main/dedmonds_resume.pdf
+[resume]: https://raw.githubusercontent.com/usefulmove/o/main/dedmonds_resume.pdf
 [website]: http://dedmonds.co
 [linkedin]: https://linkedin.com/in/dedmonds
