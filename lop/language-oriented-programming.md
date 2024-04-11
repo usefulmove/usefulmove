@@ -24,89 +24,23 @@ The Sudoku board is modeled here as a simple one-dimensional list with either va
 
 ![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/unsolved-board.png?raw=true)
 
-```scheme
-(define unsolved-board
-  (list 5 3 0 0 7 0 0 0 0
-        6 0 0 1 9 5 0 0 0
-        0 9 8 0 0 0 0 6 0
-        8 0 0 0 6 0 0 0 3
-        4 0 0 8 0 3 0 0 1
-        7 0 0 0 2 0 0 0 6
-        0 6 0 0 0 0 2 8 0
-        0 0 0 4 1 9 0 0 5
-        0 0 0 0 8 0 0 7 9 ))
-```
-
 Maths are used to determine which row, column, or subgrid (box) any position on the board belongs to. This is calculated in the `get-row`, `get-col`, and `get-box` helper functions, respectively.
 
 ![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/get-xxx.png?raw=true)
-
-```scheme
-(define (get-row pos)
-  (floor (/ pos 9)))
-
-(define (get-col pos)
-  (modulo pos 9))
-
-(define (get-box pos)
-  (let ((row (get-row pos))
-        (col (get-col pos)))
-    (+ (* (floor (/ row 3)) 3)
-       (floor (/ col 3)))))
-```
 
 Mapping each of the index positions for the board to the corresponding `get-[xxx]` helpers helps visualize how their behavior. The mapping of the `get-box` function is shown as an example below. The output can be seen in the comment block below the code. Note that the `range` function is used here to returns a list of numbers from 0 through 80 (the indices of each cell on the board).
 
 ![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/get-box-map.png?raw=true)
 
-```scheme
-(map get-box (range (length unsolved-board)))
-#|
-    0 0 0 1 1 1 2 2 2
-    0 0 0 1 1 1 2 2 2
-    0 0 0 1 1 1 2 2 2
-    3 3 3 4 4 4 5 5 5
-    3 3 3 4 4 4 5 5 5
-    3 3 3 4 4 4 5 5 5
-    6 6 6 7 7 7 8 8 8
-    6 6 6 7 7 7 8 8 8
-    6 6 6 7 7 7 8 8 8
-|#
-```
-
 Finding the first hole position is done by searching for the first 0 in the list (board).
 
 ![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/get-first-hole-pos.png?raw=true)
-
-```scheme
-(define (get-first-hole-pos board)
-  (index-of board 0))
-```
 
 ## Encoding the rules
 
 The rules of the game are encoded in the `candidate-allowed?` predicate function. The function looks at the values in the row, column, and box that correspond to a specific position, and determines if a candidate (proposed) value is already in use. `candidate-allowed?` uses `get-forbidden-candidates`, a function that returns a list of all of values already being used (in the same row, column, or box) for a specific position on the board. The code for `candidate-allowed?` and `get-forbidden-candidates` (and an example of one of the `get-[xxx]-values` functions) are copied below. Notice each one is concise.
 
 ![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/candidate-allowed.png?raw=true)
-
-```scheme
-(define (candidate-allowed? board pos value)
-  (not (member value (get-forbidden-candidates board pos))))
-
-(define (get-forbidden-candidates board pos)
-  (remove-duplicates
-   (append (get-row-values board (get-row pos))
-           (get-col-values board (get-col pos))
-           (get-box-values board (get-box pos)))))
-
-(define (get-row-values board row)
-  (let ((matching-pairs (filter
-                         (lambda (pair)
-                           (let ((index (car pair)))
-                             (= row (get-row index))))
-                         (zip-with-index board))))
-    (map cadr matching-pairs)))
-```
 
 ## Conclusion
 I hope that by walking through this solution, you have a sense of not just the elegance and power of a language-oriented approach, but also a sense of how it can be used to solve complex problems with clarity and precision. Scheme, with its minimalist syntax and incredible flexibility, isn't just a language—it becomes a way of reasoning about and describing a solution your problem. It allows you to more directly express a solution in a manner just as nuanced as the problem you're solving.
