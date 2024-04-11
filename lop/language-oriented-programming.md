@@ -4,7 +4,7 @@ There are certain languages that offer not just tools for creating software but 
 
 Scheme, with its minimalist syntax and powerful macro system, encourages a different way of thinking about programming. It's not just about writing code; it's about designing a language (a domain-specific language) tailored to the specific problem you are trying to solve. This approach is particularly helpful when solving complex problems that can be described through the composition of simpler pieces. Sudoku, a logic-based number-placement puzzle, itself presents an intriguing problem: fill a 9x9 grid so that each column, each row, and each of the nine 3x3 subgrids contain all of the digits from 1 to 9.
 
-## A Backtracking Sudoku Solve
+## A Backtracking Sudoku Solver
 
 Let's dive into one implementation of a Sudoku solver in Scheme. The `solve-board` function that implements the heart of the backtracking algorithm is shown below. Scheme's ability to mold and extend the language allows the algorithm to be define as a description of what it does. Much of what it describes can be understood without much familiarity with the language. The code looks for the first empty position (`hole`) on the board. If it doesn't fine a hole, the board is already solved.
 
