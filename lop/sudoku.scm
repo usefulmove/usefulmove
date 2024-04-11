@@ -1,7 +1,6 @@
 #lang scheme
 
 
-;; core "data types"
 ;;   board - [int] (length 81)
 ;;   pos - int (0-80)
 ;;   row - int (0-8)
@@ -23,6 +22,28 @@
 
 
 (define valid-values '(1 2 3 4 5 6 7 8 9))
+
+
+;; backtracking solver
+;; solve-board :: board -> board
+;;             :: [int] -> [int]  (empty list if no solution found)
+(define (solve-board board)
+  (call-with-current-continuation
+   (lambda (return)
+     (let ((hole (get-first-hole-pos board)))
+       (if (not hole)
+           board ; return solved board.
+           (begin
+             (for ((candidate valid-values))
+               (when (candidate-allowed? board hole candidate)
+                 (let ((could-be-solution (solve-board
+                                           (set-pos-value
+                                            board
+                                            hole
+                                            candidate))))
+                   (when (board-solved? could-be-solution)
+                     (return could-be-solution))))) ; return solved board.
+             '())))))) ; all candidates exhausted. no solution found.
 
 
 ;; display-board :: board -> null (impure)
@@ -143,28 +164,6 @@
 (define (board-solved? board)
   (and (not (null? board)) ; board is not null
        (not (get-first-hole-pos board)))) ; board contains no empty positions
-
-
-;; backtracking solver
-;; solve-board :: board -> board
-;;             :: [int] -> [int]  (empty list if no solution found)
-(define (solve-board board)
-  (call-with-current-continuation
-   (lambda (return)
-     (let ((hole (get-first-hole-pos board)))
-       (if (not hole)
-           board ; return solved board.
-           (begin
-             (for ((candidate valid-values))
-               (when (candidate-allowed? board hole candidate)
-                 (let ((could-be-solution (solve-board
-                                           (set-pos-value
-                                            board
-                                            hole
-                                            candidate))))
-                   (when (board-solved? could-be-solution)
-                     (return could-be-solution))))) ; return solved board.
-             '())))))) ; all candidates exhausted. no solution found.
 
 
 
