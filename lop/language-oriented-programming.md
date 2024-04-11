@@ -14,6 +14,8 @@ Let's dive into one implementation of a Sudoku solver in Scheme. The `solve-boar
 
 Upon finding a hole, it iterates over valid candidate values (`valid-values`), checking if they can be placed in the hole according to the rules of the game (`candidate-allowed?`). If the candidate is allowed, it fills the hole (`set-pos-value`). Then the function recursively invokes itself on a new version of the board with the hole filled. If the recursive path succeeds (`board-solved?`), we have a solution. Return the solved board using a continuation. If the path we're in fails (returns an empty list instead of a solved board), we backtrack and try the next valid candidate. If all candidates fail, no solution exists.
 
+Look through the code and decide how well it describes what happens.
+
 ( TODO - use screenshots instead of code blocks to ensure rainbow parens and aesthetic theme and typeface )
 
 ```scheme
@@ -38,7 +40,7 @@ Upon finding a hole, it iterates over valid candidate values (`valid-values`), c
 
 ## Some helper functions
 
-The Sudoku board is modeled here as a simple one-dimensional list with either valid cell values (1-9) or 0s indicating a hole, and maths are used to determine to which row, column, or subgrid (box) the one-dimensional index into the board belongs using the `get-row`, `get-col`, and `get-box` helper functions.
+The Sudoku board is modeled here as a simple one-dimensional list with either valid cell values (1-9) or 0s indicating a hole.
 
 ```scheme
 (define unsolved-board
@@ -51,7 +53,11 @@ The Sudoku board is modeled here as a simple one-dimensional list with either va
         0 6 0 0 0 0 2 8 0
         0 0 0 4 1 9 0 0 5
         0 0 0 0 8 0 0 7 9 ))
+```
 
+Maths are used to determine which row, column, or subgrid (box) any position on the board belongs to. This is calculated in the `get-row`, `get-col`, and `get-box` helper functions, respectively.
+
+```scheme
 (define (get-row pos)
   (floor (/ pos 9)))
 
@@ -65,37 +71,7 @@ The Sudoku board is modeled here as a simple one-dimensional list with either va
        (floor (/ col 3)))))
 ```
 
-Mapping each of the index positions for the board to the corresponding `get-[xxx]` helpers helps visualize how their behavior. The function output is shown below as comment block below the code. (Note that the `range` function is used here. When passed a single positive integer argument, it returns a list from 0 through one less than the argument passed. It is used here to build a list of all of the index positions of the Sudoku board.)
-
-```scheme
-(map get-row (range (length unsolved-board)))
-#|
-    0 0 0 0 0 0 0 0 0
-    1 1 1 1 1 1 1 1 1
-    2 2 2 2 2 2 2 2 2
-    3 3 3 3 3 3 3 3 3
-    4 4 4 4 4 4 4 4 4
-    5 5 5 5 5 5 5 5 5
-    6 6 6 6 6 6 6 6 6
-    7 7 7 7 7 7 7 7 7
-    8 8 8 8 8 8 8 8 8
-|#
-```
-
-```scheme
-(map get-col (range (length unsolved-board)))
-#|
-    0 1 2 3 4 5 6 7 8
-    0 1 2 3 4 5 6 7 8
-    0 1 2 3 4 5 6 7 8
-    0 1 3 3 4 5 6 7 8
-    0 1 2 3 4 5 6 7 8
-    0 1 2 3 4 5 6 7 8
-    0 1 2 3 4 5 6 7 8
-    0 1 2 3 4 5 6 7 8
-    0 1 2 3 4 5 6 7 8
-|#
-```
+Mapping each of the index positions for the board to the corresponding `get-[xxx]` helpers helps visualize how their behavior. The mapping of the `get-box` function is shown as an example below. The output can be seen in the comment block below the code. Note that the `range` function is used here to returns a list of numbers from 0 through 80 (the indices of each cell on the board).
 
 ```scheme
 (map get-box (range (length unsolved-board)))
@@ -119,7 +95,9 @@ Finding the first hole position is done by searching for the first 0 in the list
   (index-of board 0))
 ```
 
-The rules of the game are encoded in the `candidate-allowed?` predicate function. The function looks at all of the values in the row, column, and box that correspond to the position on the board passed to it, and determines if the proposed value is already in use. `candidate-allowed` calls a `get-forbidden-candidates` function that returns a list of all of the values already in use (in the same row, column, and box) for the board position provided. The code for `candidate-allowed?`, `get-forbidden-values`, and an example of one of the `get-[xxx]-values` functions used in their definition are copied below.
+## Encoding the rules
+
+The rules of the game are encoded in the `candidate-allowed?` predicate function. The function looks at the values in the row, column, and box that correspond to a specific position, and determines if a candidate (proposed) value is already in use. `candidate-allowed?` uses `get-forbidden-candidates`, a function that returns a list of all of values already being used (in the same row, column, or box) for a specific position on the board. The code for `candidate-allowed?` and `get-forbidden-candidates` (and an example of one of the `get-[xxx]-values` functions) are copied below. Notice each one is concise.
 
 ```scheme
 (define (candidate-allowed? board pos value)
@@ -143,8 +121,8 @@ The rules of the game are encoded in the `candidate-allowed?` predicate function
 ## Conclusion
 I hope by walking through this backtracking Sudoku solver, you have come to get a glance of not just the elegance and power of a language-oriented approach to programming, but also how it can be used to solve complex problems with clarity and precision. Scheme, with its minimalist syntax and profound capabilities, isn't just a programming language—it's a way of thinking and reasoning about a problem, a method of directly expressing solutions in a manner as logical and nuanced as the problem you're solving.
 
-Look through the code on GitHub. I'd love to hear what you think. Can you see this flexibility leading to cleaner and more effective code? You can watch the algorithm work below.
-
 The full code for the algorithm is available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.scm). You can use [Racket](https://racket-lang.org/) to run the code.
+
+Look through the code on GitHub. I'd love to hear what you think. Can you see this flexibility leading to cleaner and more effective code? You can watch the algorithm working below.
 
 ![backtracking](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.gif?raw=true)
