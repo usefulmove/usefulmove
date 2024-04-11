@@ -32,18 +32,18 @@
    (lambda (return)
      (let ((hole (get-first-hole-pos board)))
        (if (not hole)
-           board ; return solved board.
+           board ; return solved board
            (begin
              (for ((candidate valid-values))
                (when (candidate-allowed? board hole candidate)
-                 (let ((could-be-solution (solve-board
+                 (let ((could-be-solution (solve-board ; recursive call
                                            (set-pos-value
                                             board
                                             hole
                                             candidate))))
                    (when (board-solved? could-be-solution)
-                     (return could-be-solution))))) ; return solved board.
-             '())))))) ; all candidates exhausted. no solution found.
+                     (return could-be-solution))))) ; return solved board
+             '())))))) ; all candidates exhausted - no solution found
 
 
 ;; display-board :: board -> null (impure)
