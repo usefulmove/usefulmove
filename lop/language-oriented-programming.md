@@ -149,4 +149,4 @@ The full code for the algorithm is available on [GitHub](https://github.com/usef
 
 ( TODO - insert backtracking video or gif )
 
-![backtracking](https://github.com/usefulmove/blob/main/lop/sudoku.gif)
+![backtracking](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.gif?raw=true)
