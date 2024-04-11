@@ -8,7 +8,7 @@ First-class functions allow languages like Scheme to treat functions as data, me
 
 And without getting into detail, macros are "programs that write programs" (Doug Hoyte, Let Over Lambda, 2008). Macros let you manipulate and extend the language on a higher plane. The language is superbly flexible. It's like working with clay. An example, you can write a recursive interpreter for the language elegantly in the language. It "eats itself".
 
-## A Backtracking Sudoku Solver
+## A backtracking solver
 
 Let's dive into one implementation of a Sudoku solver in Scheme. The `solve-board` function that implements the heart of the backtracking algorithm is shown below. Scheme's ability to mold and extend the language allows the algorithm to be defined as a description of what it does. Much of what it describes can be understood without much familiarity with the language. The code looks for the position of the first empty cell (hole) on the board (`get-first-hole-pos`). If it doesn't find a hole, the board is already solved.
 
@@ -36,7 +36,7 @@ Upon finding a hole, it iterates over valid candidate values (`valid-values`), c
              '())))))) ; all candidates exhausted. no solution found.
 ```
 
-## Supporting Functions
+## Some helper functions
 
 The Sudoku board is modeled here as a simple one-dimensional list with either valid cell values (1-9) or 0s indicating a hole, and maths are used to determine to which row, column, or subgrid (box) the one-dimensional index into the board belongs using the `get-row`, `get-col`, and `get-box` helper functions.
 
