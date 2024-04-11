@@ -148,3 +148,5 @@ Look through the code on GitHub. I'd love to hear what you think. Can you see th
 The full code for the algorithm is available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.scm). You can use [Racket](https://racket-lang.org/) to run the code.
 
 ( TODO - insert backtracking video or gif )
+
+![backtracking](https://github.com/usefulmove/blob/main/lop/sudoku.gif)
