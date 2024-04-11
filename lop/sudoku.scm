@@ -11,19 +11,18 @@
 
 
 (define unsolved-board
-  (list 5 3 0 0 7 0 0 0 0
-        6 0 0 1 9 5 0 0 0
-        0 9 8 0 0 0 0 6 0
-        8 0 0 0 6 0 0 0 3
-        4 0 0 8 0 3 0 0 1
-        7 0 0 0 2 0 0 0 6
-        0 6 0 0 0 0 2 8 0
-        0 0 0 4 1 9 0 0 5
-        0 0 0 0 8 0 0 7 9 ))
+  (list 0 0 0 0 6 2 3 0 0
+        3 4 9 0 1 0 7 0 0
+        0 5 0 4 3 0 0 0 1
+        0 0 2 6 5 0 0 0 9
+        0 0 8 0 4 0 1 6 2
+        0 6 4 2 9 1 0 3 8
+        0 0 0 0 0 6 0 0 0
+        0 8 0 0 7 0 0 5 4
+        9 0 0 3 2 0 6 0 7 ))
 
 
-(define valid-values
-  (range 1 (add1 9)))
+(define valid-values '(1 2 3 4 5 6 7 8 9))
 
 
 ;; display-board :: board -> null (impure)
@@ -53,20 +52,20 @@
           (drop board (add1 pos))))
 
 
-; get-row :: pos -> row
-;         :: int -> int
+;; get-row :: pos -> row
+;;         :: int -> int
 (define (get-row pos)
   (floor (/ pos 9)))
 
 
-; get-col :: pos -> col
-;         :: int -> int
+;; get-col :: pos -> col
+;;         :: int -> int
 (define (get-col pos)
   (modulo pos 9))
 
 
-; get-box :: pos -> box
-;         :: int -> int
+;; get-box :: pos -> box
+;;         :: int -> int
 (define (get-box pos)
   (let ((row (get-row pos))
         (col (get-col pos)))
@@ -79,6 +78,33 @@
   (apply map list lst lsts))
 
 
+;; zip-with-index :: [T] -> [int T ...]
+(define (zip-with-index lst)
+  (zip (range (length lst)) lst))
+
+
+;; get-first-hole-pos :: board -> pos
+;;                    :: [int] -> int  (returns #f no holes are found)
+;; note: get-first-hole-pos returns #f no empty positions are found
+(define (get-first-hole-pos board)
+  (index-of board 0))
+
+
+;; candidate-allowed? :: board -> pos -> value -> boolean
+;;                    :: [int] -> int -> int -> boolean
+(define (candidate-allowed? board pos value)
+  (not (member value (get-forbidden-candidates board pos))))
+
+
+;; get-forbidden-candidates :: board -> pos -> [value]
+;;                          :: [int] -> int -> [int]
+(define (get-forbidden-candidates board pos)
+  (remove-duplicates
+   (append (get-row-values board (get-row pos))
+           (get-col-values board (get-col pos))
+           (get-box-values board (get-box pos)))))
+
+
 ;; get-row-values :: board -> row -> [values]
 ;;                :: [int] -> int -> [int]
 (define (get-row-values board row)
@@ -86,7 +112,7 @@
                          (lambda (pair)
                            (let ((index (car pair)))
                              (= row (get-row index))))
-                         (zip (range (length board)) board))))
+                         (zip-with-index board))))
     (map cadr matching-pairs)))
 
 
@@ -97,7 +123,7 @@
                          (lambda (pair)
                            (let ((index (car pair)))
                              (= col (get-col index))))
-                         (zip (range (length board)) board))))
+                         (zip-with-index board))))
     (map cadr matching-pairs)))
 
 
@@ -108,30 +134,8 @@
                          (lambda (pair)
                            (let ((index (car pair)))
                              (= box (get-box index))))
-                         (zip (range (length board)) board))))
+                         (zip-with-index board))))
     (map cadr matching-pairs)))
-
-
-; get-first-hole-pos :: board -> pos
-;                    :: [int] -> int
-; note: get-first-hole-pos returns #f no empty positions are found
-(define (get-first-hole-pos board)
-  (index-of board 0))
-
-
-; get-non-candidates :: board -> pos -> [value]
-;                    :: [int] -> int -> [int]
-(define (get-non-candidates board pos)
-  (remove-duplicates
-   (append (get-row-values board (get-row pos))
-           (get-col-values board (get-col pos))
-           (get-box-values board (get-box pos)))))
-
-
-; candidate-allowed? :: board -> pos -> value -> boolean
-;                     :: [int] -> int -> int -> boolean
-(define (candidate-allowed? board pos value)
-  (not (member value (get-non-candidates board pos))))
 
 
 ;; board-solved? :: board -> boolean
@@ -143,7 +147,7 @@
 
 ;; backtracking solver
 ;; solve-board :: board -> board
-;;             :: [int] -> [int] (empty list if no solution found)
+;;             :: [int] -> [int]  (empty list if no solution found)
 (define (solve-board board)
   (call-with-current-continuation
    (lambda (return)
