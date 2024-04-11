@@ -16,32 +16,13 @@ Upon finding a hole, it iterates over valid candidate values (`valid-values`), c
 
 Look through the code and decide how well it describes what happens.
 
-( TODO - use screenshots instead of code blocks to ensure rainbow parens and aesthetic theme and typeface )
-
 ![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/solve-board.png?raw=true)
-```scheme
-(define (solve-board board)
-  (call-with-current-continuation
-   (lambda (return)
-     (let ((hole (get-first-hole-pos board)))
-       (if (not hole)
-           board ; return solved board.
-           (begin
-             (for ((candidate valid-values))
-               (when (candidate-allowed? board hole candidate)
-                 (let ((could-be-solution (solve-board
-                                           (set-pos-value
-                                            board
-                                            hole
-                                            candidate))))
-                   (when (board-solved? could-be-solution)
-                     (return could-be-solution))))) ; return solved board.
-             '())))))) ; all candidates exhausted. no solution found.
-```
 
 ## Some helper functions
 
 The Sudoku board is modeled here as a simple one-dimensional list with either valid cell values (1-9) or 0s indicating a hole.
+
+![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/unsolved-board.png?raw=true)
 
 ```scheme
 (define unsolved-board
@@ -58,6 +39,8 @@ The Sudoku board is modeled here as a simple one-dimensional list with either va
 
 Maths are used to determine which row, column, or subgrid (box) any position on the board belongs to. This is calculated in the `get-row`, `get-col`, and `get-box` helper functions, respectively.
 
+![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/get-xxx.png?raw=true)
+
 ```scheme
 (define (get-row pos)
   (floor (/ pos 9)))
@@ -73,6 +56,8 @@ Maths are used to determine which row, column, or subgrid (box) any position on 
 ```
 
 Mapping each of the index positions for the board to the corresponding `get-[xxx]` helpers helps visualize how their behavior. The mapping of the `get-box` function is shown as an example below. The output can be seen in the comment block below the code. Note that the `range` function is used here to returns a list of numbers from 0 through 80 (the indices of each cell on the board).
+
+![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/get-box-map.png?raw=true)
 
 ```scheme
 (map get-box (range (length unsolved-board)))
@@ -91,6 +76,8 @@ Mapping each of the index positions for the board to the corresponding `get-[xxx
 
 Finding the first hole position is done by searching for the first 0 in the list (board).
 
+![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/get-first-hole-pos.png?raw=true)
+
 ```scheme
 (define (get-first-hole-pos board)
   (index-of board 0))
@@ -99,6 +86,8 @@ Finding the first hole position is done by searching for the first 0 in the list
 ## Encoding the rules
 
 The rules of the game are encoded in the `candidate-allowed?` predicate function. The function looks at the values in the row, column, and box that correspond to a specific position, and determines if a candidate (proposed) value is already in use. `candidate-allowed?` uses `get-forbidden-candidates`, a function that returns a list of all of values already being used (in the same row, column, or box) for a specific position on the board. The code for `candidate-allowed?` and `get-forbidden-candidates` (and an example of one of the `get-[xxx]-values` functions) are copied below. Notice each one is concise.
+
+![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/candidate-allowed.png?raw=true)
 
 ```scheme
 (define (candidate-allowed? board pos value)
