@@ -1,4 +1,4 @@
-# Sudoku: The Elegance of Language-Oriented Programming in Scheme
+# Sudoku: The elegance of language-oriented programming in Scheme
 
 There are certain languages that offer not just tools for creating software but a canvas for expressing ideas elegantly and with incredible precision. Among these, Scheme—a dialect of Lisp—stands out for its unique combination of simplicity and power. Its macros and first-class functions allow superb dexterity in functional and language-oriented programming, where the language itself can be molded and stretched to fill the problem at hand. This blog post explores this beautiful aspect of Scheme through the lens of a backtracking Sudoku solver, demonstrating the language's ability to describe a solution to such a nuanced problem.
 
@@ -146,7 +146,5 @@ I hope by walking through this backtracking Sudoku solver, you have come to get 
 Look through the code on GitHub. I'd love to hear what you think. Can you see this flexibility leading to cleaner and more effective code? You can watch the algorithm work below.
 
 The full code for the algorithm is available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.scm). You can use [Racket](https://racket-lang.org/) to run the code.
-
-( TODO - insert backtracking video or gif )
 
 ![backtracking](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.gif?raw=true)
