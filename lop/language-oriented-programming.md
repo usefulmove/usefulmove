@@ -10,7 +10,11 @@ Let's dive into one implementation of a Sudoku solver in Scheme. The `solve-boar
 
 If it does finds a hole, for the first of the valid candidates values (`valid-values`) it checks to see if that value (`candidate`) is allowed (`candidate-allowed?`) in the hole according to the rules of the game. If the value is allowed, it fills the hole with the candidate value (`set-pos-value`). Then function recursively invokes itself on a new version of the board with the hole filled. If that recursive path succeeds (`board-solved?`), we have a solution, and we return the solved board using a continuation. But if that path fails, we backtrack and try the next valid candidate in the hole. If all valid candidates fail, no solution exists.
 
+( TODO - use screenshot instead of code block below? )
+
 ```scheme
+;; solve-board :: board -> board
+;;             :: [int] -> [int] (empty list if no solution found)
 (define (solve-board board)
   (call-with-current-continuation
    (lambda (return)
@@ -32,7 +36,7 @@ If it does finds a hole, for the first of the valid candidates values (`valid-va
 
 The definitions of the helper functions used in `solve-board` are available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.rkt). A visualization of the backtracking algorithm in action solving a Sudoku board is shown below.
 
-( backtracking video or gif )
+( TODO - insert backtracking video or gif )
 
 ## Conclusion
 
