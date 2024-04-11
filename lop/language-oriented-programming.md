@@ -18,6 +18,7 @@ Look through the code and decide how well it describes what happens.
 
 ( TODO - use screenshots instead of code blocks to ensure rainbow parens and aesthetic theme and typeface )
 
+![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/solve-board.png?raw=true)
 ```scheme
 (define (solve-board board)
   (call-with-current-continuation
