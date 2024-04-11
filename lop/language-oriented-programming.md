@@ -119,7 +119,7 @@ The rules of the game are encoded in the `candidate-allowed?` predicate function
 ```
 
 ## Conclusion
-I hope by walking through this backtracking Sudoku solver, you have come to get a glance of not just the elegance and power of a language-oriented approach to programming, but also how it can be used to solve complex problems with clarity and precision. Scheme, with its minimalist syntax and profound capabilities, isn't just a programming language—it's a way of thinking and reasoning about a problem, a method of directly expressing solutions in a manner as logical and nuanced as the problem you're solving.
+I hope that by walking through this solution, you have a sense of not just the elegance and power of a language-oriented approach, but also a sense of how it can be used to solve complex problems with clarity and precision. Scheme, with its minimalist syntax and incredible flexibility, isn't just a language—it becomes a way of reasoning about and describing a solution your problem. It allows you to more directly express a solution in a manner just as nuanced as the problem you're solving.
 
 The full code for the algorithm is available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.scm). You can use [Racket](https://racket-lang.org/) to run the code.
 
