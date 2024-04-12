@@ -1,8 +1,5 @@
 # Sudoku: The elegance of language-oriented programming in Scheme
 
-TODO - add GitHub link earlier
-TODO - add challenge to implement in other languages
-
 There are certain languages that offer not just tools for creating software but a canvas for expressing ideas elegantly and with incredible precision. Among these, Scheme—a dialect of Lisp—stands out for its unique combination of simplicity and power. Its macros and first-class functions allow superb dexterity in functional and language-oriented programming, where the language itself can be molded and stretched to fill the problem at hand. This blog post explores this beautiful aspect of Scheme through the lens of a backtracking Sudoku solver, demonstrating the language's ability to describe a solution to such a nuanced problem.
 
 Scheme, with its minimalist syntax and powerful macro system, encourages a different way of thinking about programming. It's not just about writing code; it's about designing a language (a domain-specific language) tailored to the specific problem you are trying to solve. This approach is particularly helpful when solving complex problems that can be described through the composition of simpler pieces. Sudoku, a logic-based number-placement puzzle, itself presents an intriguing problem: fill a 9x9 grid so that each column, each row and each of the nine 3x3 subgrids contain all of the digits from 1 to 9.
@@ -17,7 +14,9 @@ Let's dive into one implementation of a Sudoku solver in Scheme. The `solve-boar
 
 Upon finding a hole, it iterates over valid candidate values (`valid-values`), checking if they can be placed in the hole according to the rules of the game (`candidate-allowed?`). If the candidate is allowed, it fills the hole (`set-pos-value`). Then the function recursively invokes itself on a new version of the board with the hole filled. If the recursive path succeeds (`board-solved?`), we have a solution. Return the solved board using a continuation. If the path we're in fails (returns an empty list instead of a solved board), we backtrack and try the next valid candidate. If all candidates fail, no solution exists.
 
-Look through the code and decide how well it describes what happens.
+Look through the code and decide how well you think it describes what it does.
+
+The full implementation is available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.scm).
 
 ![solve-board](https://github.com/usefulmove/usefulmove/blob/main/lop/solve-board.png?raw=true)
 
@@ -48,8 +47,8 @@ The rules of the game are encoded in the `candidate-allowed?` predicate function
 ## Conclusion
 I hope that by walking through this solution, you have a sense of not just the elegance and power of a language-oriented approach, but also a sense of how it can be used to solve complex problems with clarity and precision. Scheme, with its minimalist syntax and incredible flexibility, isn't just a language—it becomes a way of reasoning about and describing a solution your problem. It allows you to more directly express a solution in a manner just as nuanced as the problem you're solving.
 
-The full code for the algorithm is available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.scm). You can use [Racket](https://racket-lang.org/) to run the code.
+The code for the algorithm is available on [GitHub](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.scm). You can use [Racket](https://racket-lang.org/) to run it and make changes. Look through the code, and let me know what you think. Can you see this approach leading to better code? Do you have another implementation (in another language?) that you want to share?
 
-Look through the code on GitHub. I'd love to hear what you think. Can you see this flexibility leading to cleaner and more effective code? You can watch the algorithm working below.
+You can see the algorithm in action below.
 
 ![backtracking](https://github.com/usefulmove/usefulmove/blob/main/lop/sudoku.gif?raw=true)
