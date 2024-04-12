@@ -6,7 +6,7 @@ Scheme, with its minimalist syntax and powerful macro system, encourages a diffe
 
 First-class functions allow languages like Scheme to treat functions as data, meaning they can be passed as arguments to other functions, returned as values from functions, and assigned to variables. This flexibility is crucial for creating high-level abstractions and manipulating the code itself as data. This enables more expressive and concise solutions to complex problems, like navigating the possibilities in a Sudoku puzzle through recursion and the use of higher-order functions.
 
-And without getting into detail, macros are "programs that write programs" (Doug Hoyte, Let Over Lambda, 2008). Macros let you manipulate and extend the language on a higher plane. The language is superbly flexible. It's like working with clay. An example, you can write a recursive interpreter for the language elegantly in the language. It "eats itself" (see [metacircular evaluator](https://sarabander.github.io/sicp/html/4_002e1.xhtml#g_t4_002e1), Structure and Interpretation of Computer Programs, Abelson and Sussman, 1984).
+And without getting into detail, macros are "programs that write programs" (Doug Hoyte, Let Over Lambda, 2008). Macros let you manipulate and extend the language on a higher plane. The language is superbly flexible. It's like working with clay. An example of this flexibility is that you can write a recursive interpreter for the language elegantly within the language itself. It "eats itself" (see [metacircular evaluator](https://sarabander.github.io/sicp/html/4_002e1.xhtml#g_t4_002e1), Structure and Interpretation of Computer Programs, Abelson and Sussman, 1984).
 
 ## A backtracking solver
 
