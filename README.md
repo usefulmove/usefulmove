@@ -22,7 +22,7 @@ hello. i'm duane.
 - [othello](https://github.com/usefulmove/othello#readme) ( emacs lisp functional programming library )
 - [enc](https://github.com/usefulmove/enc#readme) ( emacs encryption )
 - [leetcode](https://leetcode.com/dedmonds)
-- [language-oriented programming ( blog post )](https://medium.com/@duane.edmonds/sudoku-language-oriented-programming-in-scheme-c798c6e1a4c4)
+- [language-oriented programming](https://medium.com/@duane.edmonds/sudoku-language-oriented-programming-in-scheme-c798c6e1a4c4) ( blog post )
 
 
 [resume]: https://raw.githubusercontent.com/usefulmove/o/main/dedmonds_resume.pdf
