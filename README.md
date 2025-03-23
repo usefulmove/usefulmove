@@ -22,6 +22,7 @@ hello. i'm duane.
 - [comp](https://github.com/usefulmove/comp#readme) ( interpreter )
 - [enc](https://github.com/usefulmove/enc#readme) ( emacs encryption )
 - [leetcode](https://leetcode.com/dedmonds)
+- [exercism](https://exercism.org/profiles/usefulmove)
 - [language-oriented programming](https://medium.com/@duane.edmonds/sudoku-language-oriented-programming-in-scheme-c798c6e1a4c4) ( blog post )
 
 
