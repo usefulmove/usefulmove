@@ -17,12 +17,11 @@ hello. i'm duane.
 ### Links:
 - [experience](https://dedmonds.co/dedmonds_resume.pdf) ( resume )
 - [contact me](https://www.dedmonds.co/) ( dedmonds.co )
-- coren one ( [site](https://coren.one) , [repo](https://github.com/usefulmove/coren#readme) )
-- [othello](https://github.com/usefulmove/othello#readme) ( emacs lisp functional programming library )
-- [comp](https://github.com/usefulmove/comp#readme) ( interpreter )
-- [enc](https://github.com/usefulmove/enc#readme) ( emacs encryption )
+- [enso](https://github.com/usefulmove/enso#readme) ( agent orchestration and context engineering )
+- [exercism](https://exercism.org/profiles/usefulmove) ( mentor )
 - [leetcode](https://leetcode.com/dedmonds)
-- [exercism](https://exercism.org/profiles/usefulmove)
+- coren one ( [site](https://coren.one) , [repo](https://github.com/usefulmove/coren#readme) )
+- [comp](https://github.com/usefulmove/comp#readme) ( interpreter )
 - [language-oriented programming](https://medium.com/@duane.edmonds/sudoku-language-oriented-programming-in-scheme-c798c6e1a4c4) ( blog post )
 
 
