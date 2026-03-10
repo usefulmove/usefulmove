@@ -18,7 +18,7 @@ hello. i'm duane.
 - [experience](https://dedmonds.co/dedmonds_resume.pdf) ( resume )
 - [contact me](https://www.dedmonds.co/) ( dedmonds.co )
 - [enso](https://github.com/usefulmove/enso#readme) ( agent orchestration and context engineering )
-- [exercism](https://exercism.org/profiles/usefulmove) ( mentor )
+- [exercism](https://exercism.org/profiles/usefulmove/testimonials) ( mentor )
 - [leetcode](https://leetcode.com/dedmonds)
 - coren one ( [site](https://coren.one) , [repo](https://github.com/usefulmove/coren#readme) )
 - [comp](https://github.com/usefulmove/comp#readme) ( interpreter )
