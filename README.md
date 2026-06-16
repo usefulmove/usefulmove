@@ -15,7 +15,7 @@ hello. i'm duane.
 <br><br><br>
 
 ### Links:
-- [experience](https://dedmonds.co/dedmonds_resume.pdf) ( resume )
+- [experience](https://dedmonds.co/dedmonds-resume.pdf) ( resume )
 - [contact me](https://www.dedmonds.co/) ( dedmonds.co )
 - [enso](https://github.com/usefulmove/enso#readme) ( agent orchestration and context engineering )
 - [exercism](https://exercism.org/profiles/usefulmove/testimonials) ( mentor )
