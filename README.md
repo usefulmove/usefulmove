@@ -25,6 +25,6 @@ hello. i'm duane.
 - [language-oriented programming](https://medium.com/@duane.edmonds/sudoku-language-oriented-programming-in-scheme-c798c6e1a4c4) ( blog post )
 
 
-[resume]: https://dedmonds.co/dedmonds_resume.pdf
+[resume]: https://dedmonds.co/dedmonds-resume.pdf
 [website]: http://dedmonds.co
 [linkedin]: https://linkedin.com/in/dedmonds
